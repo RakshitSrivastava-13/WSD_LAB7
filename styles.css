@@ -1,0 +1,190 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f8ff;
+    color: #2c3e50;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.8em;
+    color: #1abc9c;
+    text-shadow: 2px 2px #16a085;
+}
+
+#controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+#controls input, #controls select, #controls button {
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid #2980b9;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #2c3e50;
+    background-color: #ecf0f1;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#controls input:focus, #controls select:focus, #controls button:focus {
+    outline: none;
+    border-color: #3498db;
+    background-color: #dfe6e9;
+}
+
+#controls button {
+    background-color: #e74c3c;
+    color: white;
+    cursor: pointer;
+}
+
+#controls button:hover {
+    background-color: #c0392b;
+}
+
+#bookList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.book-item {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #3498db;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-left 0.3s ease;
+}
+
+.book-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-left: 5px solid #e74c3c;
+}
+
+.book-item h3 {
+    margin: 0;
+    font-size: 1.6em;
+    color: #34495e;
+}
+
+.book-item p {
+    margin: 10px 0;
+    color: #7f8c8d;
+}
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#pagination button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: 2px solid #3498db;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+#pagination button:hover {
+    background-color: #2ecc71;
+    border-color: #27ae60;
+}
+
+#pagination button.active {
+    background-color: #e74c3c;
+    border-color: #c0392b;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 1em;
+    background-color: #34495e;
+    color: #ecf0f1;
+    padding: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+footer .contact-info, footer .footer-links, footer .hours, footer .social-media {
+    margin-top: 15px;
+}
+
+footer .contact-info p, footer .hours p, footer .social-media p {
+    margin: 5px 0;
+}
+
+footer .footer-links p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #1abc9c;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #16a085;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #controls {
+        flex-direction: column;
+    }
+
+    #controls input, #controls select, #controls button {
+        width: 100%;
+    }
+    
+    #bookList {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    .book-item {
+        padding: 12px;
+    }
+
+    .book-item h3 {
+        font-size: 1.3em;
+    }
+
+    .book-item p {
+        font-size: 0.9em;
+    }
+
+    #pagination button {
+        padding: 8px 12px;
+    }
+}
